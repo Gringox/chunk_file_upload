@@ -28,7 +28,7 @@
       <div class="flow-drop" ondragenter="jQuery(this).addClass('flow-dragover');" ondragend="jQuery(this).removeClass('flow-dragover');" ondrop="jQuery(this).removeClass('flow-dragover');">
         Drop files here to upload or <a class="flow-browse-folder"><u>select folder</u></a> or <a class="flow-browse"><u>select from your computer</u></a> or <a class="flow-browse-image"><u>select images</u></a>
       </div>
-      
+
       <div class="flow-progress">
         <table>
           <tr>
@@ -42,7 +42,7 @@
           </tr>
         </table>
       </div>
-      
+
       <ul class="flow-list"></ul>
 
       <script>
@@ -118,7 +118,7 @@
             // Reflect that the file upload has completed
             $self.find('.flow-file-progress').text('(completed)');
             $self.find('.flow-file-pause, .flow-file-resume').remove();
-            $self.find('.flow-file-download').attr('href', '/download/' + file.uniqueIdentifier).show();
+            $self.find('.flow-file-download').attr('href', '/' + file.name).show();
           });
           r.on('fileError', function(file, message){
             // Reflect that the file upload has resulted in error
@@ -195,6 +195,3 @@
     </div>
   </body>
 </html>
-
-
-    
